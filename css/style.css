@@ -1,0 +1,195 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap");
+/*
+=============== 
+Null Style
+===============
+*/
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:focus, *:active {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html, body {
+  height: 100%;
+  line-height: 1;
+  font-size: 1rem;
+  font-weight: 400;
+  background: #F1F5F8;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  --clr-white: #fff;
+  --clr-black: #000;
+  --ff-primary: "Roboto", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+body {
+  font-family: var(--ff-primary);
+  color: var(--clr-black);
+}
+
+h1, h2, h3, h4 {
+  text-transform: capitalize;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+/*  global classes */
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.col {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.col__name-color {
+  text-align: center;
+  text-transform: lowercase;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  color: #fff;
+}
+.col__name-color:hover {
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.col__header {
+  position: relative;
+}
+.col__alert {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  left: 0;
+  top: -70%;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: capitalize;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 1rem;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.col__alert.show {
+  opacity: 1;
+}
+.col__btn_lock {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.col__btn_lock:hover {
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
